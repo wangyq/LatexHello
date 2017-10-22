@@ -32,10 +32,10 @@
 &	b \equiv a \pmod p ,\quad	b \equiv 1 \pmod {p-1} \\
 &	\Longrightarrow a^b \equiv a^{1+h\cdot (p-1)} \equiv a \pmod p
 \end{eqnarray*}
-从而, 有:
+从而, 有 $(k,p)=1$:
 $$k \equiv a \pmod p \Longrightarrow k^k \equiv a^k \equiv a^b \equiv a \pmod p$$ 
-(2) 假设 $n=t$时,命题成立, 即存在$u$满足: $u^u \equiv a \pmod {p^t}$, 记 $u^u = l\cdot p^t + a$,\\
-当 $n=t+1$时, 取 $k=u + m\cdot \phi (p^{t+1})$，有:
+(2) 假设 $n=t$时,命题成立, 即存在$u$, $(u,p)=1$, 并且满足: $u^u \equiv a \pmod {p^t}$, 记 $u^u = l\cdot p^t + a$,\\
+当 $n=t+1$时, 取 $k=u + m\cdot \phi (p^{t+1})$， 那么$(k,p)=1$, 从而$(k,p^{t+1}) =1$, 于是: 
 \begin{eqnarray*}
 	& k \equiv u+m\cdot \phi(p^{t+1}) \equiv u + m\cdot p^{t+1} - m\cdot p^t \equiv u-m\cdot p^t \pmod{p^{t+1}}\\
 	&\Longrightarrow  k^k \equiv (u-m\cdot p^t)^k \equiv (u-m\cdot p^t)^u \equiv u^u -C_u^1\cdot u^{u-1} m\cdot p^t \equiv u^u - u^u\cdot m\cdot p^t \\
@@ -44,7 +44,7 @@ $$k \equiv a \pmod p \Longrightarrow k^k \equiv a^k \equiv a^b \equiv a \pmod p$
 因为 $(a,p)=1$, 所以存在$m$, 满足： $l-am=s\cdot p$, \\
 并且满足条件的$m$是无穷多个，从而$k$也是无穷多个， 于是：
 $$ k^k \equiv a + s\cdot p^{t+1} \equiv a \pmod {p^{t+1}}$$
-由归纳假定, 对任意的$n$, 存在无穷多个$k$, 满足： $p^n|k^k-a$.
+由归纳假定, 对任意的$n$, 存在无穷多个$k$, $(k,p)=1$ 满足： $p^n|k^k-a$.
 
 \newpage
 \subsection{2017清华大学金秋营10月13号}
