@@ -1,0 +1,115 @@
+\documentclass[UTF8]{article}
+\usepackage{ctex}
+\usepackage{graphicx}
+
+\usepackage{geometry}
+%\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\geometry{scale=0.8}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\title{中学数学问题}
+\author{yinqingwang }
+\date{July 2016}
+\begin{document}
+	\maketitle
+	\tableofcontents
+\newpage
+\section{2017年}
+
+
+
+\subsection{2017北京大学数学科学学院秋令营10月13日}
+
+\noindent 3.给定素数$p$, 正整数$n,a$, 其中$(a,p)=1$, 证明: 存在无穷多个正整数k,使得 $p^n|k^k-a$.\\
+\textbf{Proof.}\\
+对$n$归纳证明. \\
+记欧拉函数为$\phi (n)$, 则 : $\phi (p^n) = (p-1)p^{n-1}$ \\
+(1) 当$n=1$时, 取$k$满足如下条件: $k \equiv a \pmod p ,\quad	k \equiv 1 \pmod {p-1}$, \\
+那么由中国剩余定理解出满足条件的 $k = b + m\cdot p(p-1) , 0<b < p(p-1)$, 其中: 
+\begin{eqnarray*}
+&	b \equiv a \pmod p ,\quad	b \equiv 1 \pmod {p-1} \\
+&	\Longrightarrow a^b \equiv a^{1+h\cdot (p-1)} \equiv a \pmod p
+\end{eqnarray*}
+从而, 有:
+$$k \equiv a \pmod p \Longrightarrow k^k \equiv a^k \equiv a^b \equiv a \pmod p$$ 
+(2) 假设 $n=t$时,命题成立, 即存在$u$满足: $u^u \equiv a \pmod {p^t}$, 记 $u^u = l\cdot p^t + a$,\\
+当 $n=t+1$时, 取 $k=u + m\cdot \phi (p^{t+1})$，有:
+\begin{eqnarray*}
+	& k \equiv u+m\cdot \phi(p^{t+1}) \equiv u + m\cdot p^{t+1} - m\cdot p^t \equiv u-m\cdot p^t \pmod{p^{t+1}}\\
+	&\Longrightarrow  k^k \equiv (u-m\cdot p^t)^k \equiv (u-m\cdot p^t)^u \equiv u^u -C_u^1\cdot u^{u-1} m\cdot p^t \equiv u^u - u^u\cdot m\cdot p^t \\
+	& \equiv u^u(1-m\cdot p^t) \equiv (l\cdot p^t +a)(1-m\cdot p^t) \equiv a + (l-a\cdot m)p^t \pmod{p^{t+1}}
+\end{eqnarray*}
+因为 $(a,p)=1$, 所以存在$m$, 满足： $l-am=s\cdot p$, \\
+并且满足条件的$m$是无穷多个，从而$k$也是无穷多个， 于是：
+$$ k^k \equiv a + s\cdot p^{t+1} \equiv a \pmod {p^{t+1}}$$
+由归纳假定, 对任意的$n$, 存在无穷多个$k$, 满足： $p^n|k^k-a$.
+
+\newpage
+\subsection{2017清华大学金秋营10月13号}
+\noindent 2.设连续函数 $f: (0,+\infty) \longrightarrow (0,+\infty)$, 满足: $f(\frac{x+y}{2}) = f(\sqrt{xy}); (x,y>0)$ , 求出所有满足条件的 $f(x)$, 并证明。\\
+\textbf{Solution.} \\
+(1) 令$y=\frac{1}{x}$, 于是:
+$$f\left (\frac{1}{2}(x+\frac{1}{x})\right) = f(1)$$
+记: 
+$$z=\frac{1}{2}(x+\frac{1}{x}) \ge 1 \Longrightarrow f(z) = f(1) $$
+(2) 令$x=1+a,y=1-a , 0<a<1$,则有：
+$$f(1) = f(\sqrt{1-a^2})$$
+记:  $z=\sqrt{1-a^2} \in (0,1)$, 则有:
+$$f(z) = f(1)$$
+
+综上, 得到: $f(x)=f(1) = \text{常数}, x\in (0,+\infty).$
+
+
+\noindent 5. 给定奇素数$p$, 求集合$\left\{(x,y)\mid x^2+y^2 \equiv a \pmod{p}; x,y\in \{0,1,2,\cdots ,(p-1)\} \right\}$ 的元素个数。
+\\
+\textbf{Solution.} \\
+首先, $a \ne 0 \pmod p$时, 方程$uv\equiv a \pmod p $的解$(u,v)$的数目是 $p-1$,为简单记,假定$a\in\{0,1,2,...,p-1\}$ .\\
+记 某个元$b$模$p$的逆元$c=b^{-1}$, 也即$bc\equiv b\cdot b^{-1}\equiv1\pmod{p}$\\
+(1) 当$p\equiv1 \pmod{4}$时，由欧拉判别法，若$b$是模$p$的平方剩余, 则$-b$也是模$p$的平方剩余, 于是平方剩余是以$\pm b$的形式成对出现。从而$-1$是模p的平方剩余，可记$z^2\equiv -1 \pmod{p}$, 
+
+(i) 如果$a = 0 $, 那么$x^2\equiv -y^2 \pmod{p}$, 由于平方剩余以$\pm b$形式成对出现,因此$x=y=0$，或者$x,y\ne 0$以$2(p-1)$组出现,
+此时解的总数为: $1+2(p-1)=2p-1$
+
+(ii) 如果$a\ne 0 $, 那么有:
+\begin{eqnarray*}
+	&x^2+y^2 \equiv a \pmod{p} & \Longrightarrow x^2 - (-1)y^2 \equiv a \pmod{p}\\
+	&\Longrightarrow x^2 - (zy)^2 \equiv a \pmod{p} & \Longrightarrow (x-zy)(x+zy) \equiv a \pmod{p}\\
+	&\Longrightarrow u\cdot v \equiv a \pmod{p}
+\end{eqnarray*}
+其中,$(u,v)$ 和 $(x,y)$一一对应.
+\begin{eqnarray*}
+	u=x-zy,v=x+zy \\
+	\Longleftrightarrow x=(u+v)2^{-1}, y=(u-v)2^{-1}z^{-1}
+\end{eqnarray*}
+不同的$(u,v)$一共有$p-1$组, 所以不同的解$(x,y)$的数目也是 $p-1$.
+\\
+(2) 当$p\equiv3 \pmod{4}$时，由欧拉判别法, 如果$b$是平方剩余, 那么$-b$是平方非剩余,
+
+(i) 如果$a = 0 $, 那么$x^2+y^2 \equiv 0 \pmod p$，只有一组解: $(x,y)=(0,0)$
+
+(ii) 如果$a\ne 0 $, 当$y$ 依次取遍 $\{0,1,2,...,p-1\}$时, 考虑$x$的可能取值时, 对每个$y$,下述方程只有一个有解:\\
+\begin{eqnarray*}
+	x^2 \equiv a - y^2 \pmod p \\
+	x^2 \equiv y^2 - a \pmod p \\
+\end{eqnarray*}
+因为所有的$y$的数目是$p$, 所以上述两个方程给出的所有解$(x,y)$的数目是$2p$, 但是方程:\\
+$$x^2 \equiv y^2 - a \pmod p \Longleftrightarrow x^2 - y^2 \equiv - a \equiv b\pmod p$$
+解的数目是 $p-1$组， 故 $x^2 \equiv a - y^2 \pmod p$，也即$x^2 +  y^2\equiv a  \pmod p$ 的解的数目是: $2p-(p-1) = p+1$ 。\\
+注： 如果$y^2 \equiv a \pmod p$，那么两个方程同时给出解$x=0$, 此时不同的$y$只有2个,所以总的解数目还是$2p$。\\
+\\
+综上, 解数目$(0 \le a < p-1)$:
+$$ =\left\{
+\begin{aligned}
+2p-1, & \quad a = 0 , p \equiv 1 \pmod 4 \\
+1, &\quad  a = 0 , p \equiv 3 \pmod 4 \\
+p-1, &\quad  a\ne 0 , p \equiv 1 \pmod 4 \\
+p+1, &\quad  a\ne 0 , p \equiv 3 \pmod 4 \\
+\end{aligned}
+\right.
+$$
+
+\section{Conclusion}	
+	这是一个CTEX的utf-8编码例子，{\kaishu 这里是楷体显示}，{\songti 这里是宋体显示}，{\heiti 这里是黑体显示}，{\fangsong 这里是仿宋显示}，{\lishu 这里是隶书显示}，{\youyuan 这里是幼圆显示}。
+\end{document}
