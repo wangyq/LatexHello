@@ -1,0 +1,39 @@
+%%This is a very basic article template.
+%%There is just one section and two subsections.
+\documentclass[a4paper]{article}
+
+\usepackage{geometry}
+%\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\geometry{scale=0.8}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}  % picture's path 
+
+
+\title{Latex Hello Article}
+\author{yinqingwang }
+\date{July 2014}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\begin{abstract}
+	This is a test abstract!
+	
+\end{abstract}
+
+\section{Introduction}
+
+$$\sum_{i=1}^{5}\sum_{j=i+1}^{5}cos(\theta_i-\theta_j)$$ 
+
+\subsection{Subtitle}
+
+Plain text.
+
+\subsection{Another subtitle}
+
+More plain text.
+
+
+\end{document}
