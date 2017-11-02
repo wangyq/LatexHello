@@ -16,12 +16,18 @@
 	\maketitle
 	\tableofcontents
 \newpage
+
+\section{练习题}
+\noindent 1. 有单位圆内接五边形,此五边形的边长以及对角线共十条线段, 求此每线段的平方之和的最大值。\\
+\noindent \textbf{Solution.} \\
+设单位圆的圆心为坐标系的原点, 此五边形的五个顶点的坐标为 $(\cos\theta_i,\sin\theta_i)$, $0\le \theta_i < \theta_j < 2\pi, 1 \le i < j \le 5$. 那么所求为,
+ $$ S = \sum_{i=1}^{4}\sum_{j=i+1}^{5}[(\cos\theta_j-\cos\theta_i)^2+(\sin\theta_j-\sin\theta_i)^2] = \sum_{i=1}^{4}\sum_{j=i+1}^{5}(2-2\cos(\theta_j-\theta_i))$$
+
+
 \section{2017年}
 
-
-
 \subsection{2017北京大学数学科学学院秋令营10月13日}
-
+\subsubsection{第3题}
 \noindent 3.给定素数$p$, 正整数$n,a$, 其中$(a,p)=1$, 证明: 存在无穷多个正整数k,使得 $p^n|k^k-a$.\\
 \textbf{Proof.}\\
 对$n$归纳证明. \\
@@ -48,6 +54,7 @@ $$ k^k \equiv a + s\cdot p^{t+1} \equiv a \pmod {p^{t+1}}$$
 
 \newpage
 \subsection{2017清华大学金秋营10月13号}
+\subsubsection{第2题}
 \noindent 2.设连续函数 $f: (0,+\infty) \longrightarrow (0,+\infty)$, 满足: $f(\frac{x+y}{2}) = f(\sqrt{xy}); (x,y>0)$ , 求出所有满足条件的 $f(x)$, 并证明。\\
 \textbf{Solution.} \\
 (1) 令$y=\frac{1}{x}$, 于是:
@@ -60,8 +67,27 @@ $$f(1) = f(\sqrt{1-a^2})$$
 $$f(z) = f(1)$$
 
 综上, 得到: $f(x)=f(1) = \text{常数}, x\in (0,+\infty).$
+\subsubsection{第3题}
+\noindent 3.设 $m,n\in N, m \le n$, 证明: $\sum_{i=0}^{m}C_n^i < \left(\frac{3n}{m}\right)^m$
+\\
+\textbf{证:}\\
+\begin{eqnarray*}
+C_n^i=\frac{n!}{i!(n-i)!} = \frac{n(n-1)\cdots(n-i+1)}{i!} < \frac{n^i}{i!} = \frac{m^i}{i!}\cdot \left(\frac{n}{m}\right)^i < \left( \frac{n}{m}\right)^m \cdot \frac{m^i}{i!} \\
+\\
+\sum_{i=0}^{m}C_n^i < \sum_{i=0}^{m}\left( \frac{n}{m}\right)^m \cdot \frac{m^i}{i!} = \left( \frac{n}{m}\right)^m \cdot \sum_{i=0}^{m}\frac{m^i}{i!} < \left( \frac{n}{m}\right)^m \cdot e^m = \left( \frac{e\cdot n}{m}\right)^m < \left( \frac{3n}{m}\right)^m
+\end{eqnarray*}
 
+显然有: $$\sum_{i=0}^{m}C_n^i  = \sum_{i=0}^{m}C_{n-1}^i + \sum_{i=0}^{m-1}C_{n-1}^i $$ \\
+当$m=n$时, 不等式显然成立。 下面假设 $1 \le m<n$. 对$n$进行归纳证明。\\
+(1) 当$n=2$时, 有$m=1$, 不等式显然成立。 \\
+(2) 假设当$n=k$时, 不等式 $\sum_{i=0}^{m}C_k^i < \left(\frac{3k}{m}\right)^k$ 成立, 则当$n=k+1$时, 有:\\
+\begin{eqnarray*}
+	\sum_{i=0}^{m}C_{k+1}^i = C_{k+1}^0 + \sum_{i=1}^{m}(C_k^i + C_k^{i-1}) = \sum_{i=0}^{m}C_k^i + \sum_{i=0}^{m-1}C_k^i < \left(\frac{3k}{m}\right)^k + \left(\frac{3k}{m-1}\right)^k \\
+	\Longleftrightarrow \left(\frac{3k}{m}\right)^k + \left(\frac{3k}{m-1}\right)^k < \left(\frac{3(k+1)}{m}\right)^{k+1} = \frac{3(k+1)}{m} \cdot \left(\frac{3(k+1)}{m}\right)^{k}	\\
+	\Longleftrightarrow 1+\left(\frac{m}{m-1}\right)^k < \frac{3(k+1)}{m} \left(\frac{k+1}{k}\right)^{k}
+\end{eqnarray*}
 
+\subsubsection{第5题}
 \noindent 5. 给定奇素数$p$, 求集合$\left\{(x,y)\mid x^2+y^2 \equiv a \pmod{p}; x,y\in \{0,1,2,\cdots ,(p-1)\} \right\}$ 的元素个数。
 \\
 \textbf{Solution.} \\
