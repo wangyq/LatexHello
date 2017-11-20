@@ -7,6 +7,7 @@
 \geometry{scale=0.8}
 
 \usepackage[utf8]{inputenc}
+\usepackage{amssymb}
 \usepackage{amsmath}
 
 \title{中学数学问题}
@@ -18,9 +19,20 @@
 \newpage
 
 \section{练习题}
-\noindent 1. 有单位圆内接五边形,此五边形的边长以及对角线共十条线段, 求此每线段的平方之和的最大值。\\
+\noindent 1. 有单位圆内接的任意五边形,对五边形的五个顶点, 连接每两个顶点得到一条线段，求这些线段的平方之和的最大值。\\
 \noindent \textbf{Solution.} \\
-设单位圆的圆心为坐标系的原点, 此五边形的五个顶点的坐标为 $(\cos\theta_i,\sin\theta_i)$, $0\le \theta_i < \theta_j < 2\pi, 1 \le i < j \le 5$. 那么所求为,
+以单位圆的圆心为坐标系的原点建立坐标系, 五边形的五个顶点以复数分别表示为： $z_i, \quad i=1,2,3,4,5$, \\
+那么 $|z_i|=1$, 记所求的值为 $S$, 则有:
+\begin{align*}
+2S &= \sum_{i=1}^{5}\sum_{j=1}^{5}|z_i-z_j| = \sum_{i=1}^{5}\sum_{j=1}^{5}(z_i-z_j)(\bar{z_i}-\bar{z_j}) =  \sum_{i=1}^{5}\sum_{j=1}^{5}(|z_i|^2+|z_j|^2-z_i\bar{z_j} - \bar{z_i}z_j) \\
+&=\sum_{i=1}^{5}\sum_{j=1}^{5}(2-z_i\bar{z_j} - \bar{z_i}z_j)=2\times5\times5-\sum_{i=1}^{5}\sum_{j=1}^{5}(z_i\bar{z_j} + \bar{z_i}z_j) = 50 - (\sum_{i=1}^{5}z_i\cdot \sum_{j=1}^{5}\bar{z_j} + \sum_{i=1}^{5}\bar{z_i}\cdot \sum_{j=1}^{5}z_j) \\
+&= 50 - 2 \cdot \sum_{i=1}^{5}z_i \cdot \sum_{i=1}^{5}\bar{z_i} = 50 - 2 \left|\sum_{i=1}^{5}z_i \right|^2 \le 50 \\
+S & \le 25
+\end{align*}
+等号成立当且仅当 $\sum z_i = 0$, 也即多边形为正五边形时，达到最大值 = 25。$\blacksquare $\\
+
+
+\noindent 设单位圆的圆心为坐标系的原点, 此五边形的五个顶点的坐标为 $(\cos\theta_i,\sin\theta_i)$, $0\le \theta_i < \theta_j < 2\pi, 1 \le i < j \le 5$. 那么所求为,
  $$ S = \sum_{i=1}^{4}\sum_{j=i+1}^{5}[(\cos\theta_j-\cos\theta_i)^2+(\sin\theta_j-\sin\theta_i)^2] = \sum_{i=1}^{4}\sum_{j=i+1}^{5}(2-2\cos(\theta_j-\theta_i))$$
 
 
