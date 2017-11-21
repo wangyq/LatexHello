@@ -66,6 +66,30 @@ $$ k^k \equiv a + s\cdot p^{t+1} \equiv a \pmod {p^{t+1}}$$
 
 \newpage
 \subsection{2017清华大学金秋营10月13号}
+\subsubsection{第1题}
+\noindent 1. 设T是平面到自身的映射, 对平面上任意两点P,Q, d(P,Q) = d(T(P),T(Q)), 这里d(P,Q)代表两点之间的距离。证明: 存在实数$a,b,c,d,x_0,y_0$ 使得在平面直角坐标系下, T把每个点 $x,y$ 映射成 $(ax+by+x_0, cx+dy+y_0)$。\\
+\textbf{Proof.} \\
+显然平移和旋转变换是保持距离不变的线性映射, 设旋转角为 $\theta$, 平移的距离为$(x_0,y_0)$ 于是由点$(x,y)$到点$(u,v)$的复合变换可以表示为： \\
+$$
+\begin{bmatrix}
+u \\
+v
+\end{bmatrix} =
+\begin{bmatrix}
+\cos \theta & -\sin \theta \\
+\sin \theta & \cos \theta 
+\end{bmatrix} \cdot 
+\begin{bmatrix}
+x \\
+y
+\end{bmatrix} + 
+\begin{bmatrix}
+x_0 \\
+y_0
+\end{bmatrix}
+$$
+所以, 存在实数 $a=\cos \theta, b=-\sin \theta, c=\sin \theta, d=\cos \theta, x_0,y_0$， 其中 $\theta, x_0,y_0$ 为任意实数，构成的上述映射T满足要求。
+
 \subsubsection{第2题}
 \noindent 2.设连续函数 $f: (0,+\infty) \longrightarrow (0,+\infty)$, 满足: $f(\frac{x+y}{2}) = f(\sqrt{xy}); (x,y>0)$ , 求出所有满足条件的 $f(x)$, 并证明。\\
 \textbf{Solution.} \\
@@ -78,7 +102,21 @@ $$f(1) = f(\sqrt{1-a^2})$$
 记:  $z=\sqrt{1-a^2} \in (0,1)$, 则有:
 $$f(z) = f(1)$$
 
-综上, 得到: $f(x)=f(1) = \text{常数}, x\in (0,+\infty).$
+\noindent \textbf{Or: }(2) 令$x=2\cos^2\theta, y=2\sin^2\theta$, 其中 $\theta \in (0,\frac{\pi}{2})$, 则有:
+$$f(1) = f(\sqrt{4\cos^2\theta \cdot \sin^2\theta}) = f(2\cos\theta \cdot \sin \theta) = f(\sin 2\theta)$$
+记: $z=\sin2\theta \in (0,1)$, 则有： $f(z) =1$
+\\
+\\
+\noindent \textbf{Or:} 给定任意的 $a>b>0$, 令:
+$$ x = a - \sqrt{a^2-b^2}, y = a + \sqrt{a^2-b^2}$$
+则:
+$$ f(a) = f(\frac{x+y}{2}) = f(\sqrt{xy}) = f(b) $$
+所以, 对任意的 $x>0$, 有: $f(x) = $常数。
+\\
+\\
+综上, 得到: $f(x)=f(1) = \text{常数}, x\in (0,+\infty).$ $\blacksquare$
+
+
 \subsubsection{第3题}
 \noindent 3.设 $m,n\in N, m \le n$, 证明: $\sum_{i=0}^{m}C_n^i < \left(\frac{3n}{m}\right)^m$
 \\
