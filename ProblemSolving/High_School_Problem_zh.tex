@@ -19,6 +19,7 @@
 \newpage
 
 \section{练习题}
+\subsubsection{复数相关}
 \noindent 1. 有单位圆内接的任意五边形,对五边形的五个顶点, 连接每两个顶点得到一条线段，求这些线段的平方之和的最大值。\\
 \noindent \textbf{Solution.} \\
 以单位圆的圆心为坐标系的原点建立坐标系, 五边形的五个顶点以复数分别表示为： $z_i, \quad i=1,2,3,4,5$, \\
@@ -35,6 +36,28 @@ S & \le 25
 \noindent 设单位圆的圆心为坐标系的原点, 此五边形的五个顶点的坐标为 $(\cos\theta_i,\sin\theta_i)$, $0\le \theta_i < \theta_j < 2\pi, 1 \le i < j \le 5$. 那么所求为,
  $$ S = \sum_{i=1}^{4}\sum_{j=i+1}^{5}[(\cos\theta_j-\cos\theta_i)^2+(\sin\theta_j-\sin\theta_i)^2] = \sum_{i=1}^{4}\sum_{j=i+1}^{5}(2-2\cos(\theta_j-\theta_i))$$
 
+\subsubsection{初中数学}
+\noindent 1. 已知实数 $a \ge b \ge c$, 并且满足: $a+b+c=0, a^2+b^2+c^2=1$, 求$a+b$的取值范围。 \\
+\noindent \textbf{Solution.} \\
+由已知， $ -c = a + b \ge 2c$, 故 $  c \le 0 $ \\
+将 $c$ 看成常量, 易得 $a,b$为方程 ： $x^2 + (x+c)^2 + c^2 -1 = 2x^2 + 2cx + 2c^2 -1 =0$ 的两根。
+\begin{align*}
+ \Delta = (2c)^2 - 4\times 2 \times (2c^2-1) = 4(2-3c^2)\ge 0 \\
+\Rightarrow  c^2 \le \frac{2}{3} \\
+ \\
+ x =a,b = \frac{-2c \pm \sqrt{\Delta }}{2\times 2} \ge c \\
+ \Rightarrow c^2 \ge \frac{1}{6} \\
+-\sqrt{\frac{2}{3}} \le c \le -\sqrt{\frac{1}{6}} \\
+\sqrt{\frac{1}{6}} \le a+b=-c \le \sqrt{\frac{2}{3}}
+\end{align*}
+$\blacksquare$ \\
+
+\noindent 2. 已知 $ m \ne 0$ , 对任何的 $x\ge4$ 下述不等式都成立，求$m$的取值范围。 
+$$ \frac{m^2\cdot x -1}{mx+1} < 0 $$
+
+\noindent \textbf{Solution.} \\
+分式变为乘积后为二次方程。 易得 $m<0$ 。两个根 $x_1,x_2 <4$ ,可以解得m的取值范围。 \\
+$m<-1 , \quad -1/4<m<0 \quad \blacksquare$
 
 \section{2017年}
 
@@ -107,14 +130,14 @@ $$f(1) = f(\sqrt{4\cos^2\theta \cdot \sin^2\theta}) = f(2\cos\theta \cdot \sin \
 记: $z=\sin2\theta \in (0,1)$, 则有： $f(z) =1$
 \\
 \\
+综上, 得到: $f(x)=f(1) = \text{常数}, x\in (0,+\infty).$
+\\
+\\
 \noindent \textbf{Or:} 给定任意的 $a>b>0$, 令:
 $$ x = a - \sqrt{a^2-b^2}, y = a + \sqrt{a^2-b^2}$$
 则:
 $$ f(a) = f(\frac{x+y}{2}) = f(\sqrt{xy}) = f(b) $$
-所以, 对任意的 $x>0$, 有: $f(x) = $常数。
-\\
-\\
-综上, 得到: $f(x)=f(1) = \text{常数}, x\in (0,+\infty).$ $\blacksquare$
+所以, 对任意的 $x>0$, 有: $f(x) = $常数。 $\blacksquare$
 
 
 \subsubsection{第3题}
