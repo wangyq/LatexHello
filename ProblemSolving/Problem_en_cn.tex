@@ -15,6 +15,13 @@
 
 \usepackage{amsmath}
 
+\usepackage{hyperref} %支持书签%
+%\hypersetup{hidelinks}
+\hypersetup{colorlinks=true,linkcolor=black}
+
+%\usepackage[colorlinks,linkcolor=red,anchorcolor=blue,citecolor=green]{hyperref}
+
+
 \begin{document}
 
 \maketitle
@@ -107,7 +114,7 @@ $$P = \sum_{i=1+n/2}^{n}C_n^i0.6^i(1-0.6)^{n-i}$$
 
 \section{Finite products of sine function}
 \subsection{1}
-Prove: $$\prod_{k=1}^{n-1}sin\frac{k\pi}{n} = \frac{n}{2^{n-1}} $$
+Prove that $$\prod_{k=1}^{n-1}sin\frac{k\pi}{n} = \frac{n}{2^{n-1}} $$
 \\\textbf{Proof.}
 
 Consider $z^n=1$, each root is 

@@ -10,6 +10,14 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 
+\usepackage{hyperref} %支持书签%
+%\hypersetup{hidelinks}
+\hypersetup{colorlinks=true,linkcolor=black}
+
+%\usepackage[colorlinks,linkcolor=red,anchorcolor=blue,citecolor=green]{hyperref}
+
+
+
 \title{中学数学问题}
 \author{yinqingwang }
 \date{July 2016}
@@ -59,6 +67,56 @@ $$ \frac{m^2\cdot x -1}{mx+1} < 0 $$
 分式变为乘积后为二次方程。 易得 $m<0$ 。两个根 $x_1,x_2 <4$ ,可以解得m的取值范围。 \\
 $m<-1 , \quad -1/4<m<0 \quad \blacksquare$
 
+\subsubsection{函数方程}
+\noindent 1. 已知 $f(f(x)) = -x$, 并且 $x, f(x) $ 为整数， 求其中一个 $f(x)$ 的表达式。 \\
+\noindent \textbf{Solution.} \\
+由已知, 有: 
+\begin{align*}
+f(f(f(x))) &= f(-x) \\
+f(f(f(x))) &= -f(x) \\
+\Longrightarrow  f(-x) & = -f(x) \\
+\Longrightarrow f(0) & = 0
+\end{align*}
+也即映射 $f(x)$ 的状态为: $ x\rightarrow f(x)\rightarrow  -x\rightarrow -f(x)\rightarrow x$， \\
+从而, 满足条件的 $f(x)$ 解有无穷多, 下面是其中一个解:
+$$
+f(n) = \left\{ 
+\begin{aligned}
+0, n=0 \\
+n+1, \quad n>0\text{奇数}\\
+-n+1,  \quad n>0\text{偶数}\\
+n-1,  \quad n<0\text{奇数}\\
+-n-1,  \quad n<0\text{偶数}
+\end{aligned}
+\right.
+$$
+
+\subsubsection{概率相关}
+\noindent 1、甲和乙下棋，一局中甲获胜的概率是2/3，乙获胜的概率是1/3，一方比另一方多赢两局算赢，求甲获胜的概率？ \\
+\noindent \textbf{Solution.} \\
+记事件A: 一局中甲胜, 事件B: 一局中乙胜, 事件C: 最终甲胜\\
+于是有: 
+$$P(C) =P(\{AB,BA\} \cup \{AB,BA\} \cdots \cup AA) = (\frac{2}{3})^2 \sum_{n=0}^{\infty}(\frac{4}{9})^n = \frac{4}{5}$$
+$\blacksquare$
+
+\noindent 2.将一条给定的线段分成三段，求这三段能够拼成三角形的概率。 \\
+\noindent \textbf{Solution.} \\
+不失一般性, 设线段长度为1. 分别记三条线段长度为X,Y,Z. \\
+三条线段取法为: 先随机取一段X, 然后从剩下的1-X中随机取一段Y, 最后的线段为Z. 于是随机变量为X,Y, 并且Z=1-X-Y. \\
+由取法知道：
+\begin{align*}
+f_x(x) & = 1, \quad 0<x<1 \\
+f_{Y|X}(y|x) & = \frac{1}{1-x}, \quad 0<y<1-x \\
+\text{X,Y,Z构成三角形} & \Longrightarrow \text{区域D：}0<X<\frac{1}{2}, \quad 0<Y<\frac{1}{2},\quad \frac{1}{2}<X+Y<1
+\end{align*}
+于是有: \\
+\begin{align*}
+P(\{\text{X,Y,Z构成三角形}\}) & = \iint_{D} f(x,y)\mathrm{d}x\mathrm{d}y  \\
+ & = \iint_{D} f_x(x) f_{Y|X}(y|x) \mathrm{d}x\mathrm{d}y \\
+ & = \ln2 - \frac{1}{2}= 0.193
+\end{align*}
+
+
 \section{2017年}
 
 \subsection{2017北京大学数学科学学院秋令营10月13日}
@@ -87,7 +145,6 @@ $$k \equiv a \pmod p \Longrightarrow k^k \equiv a^k \equiv a^b \equiv a \pmod p$
 $$ k^k \equiv a + s\cdot p^{t+1} \equiv a \pmod {p^{t+1}}$$
 由归纳假定, 对任意的$n$, 存在无穷多个$k$, $(k,p)=1$ 满足： $p^n|k^k-a$.
 
-\newpage
 \subsection{2017清华大学金秋营10月13号}
 \subsubsection{第1题}
 \noindent 1. 设T是平面到自身的映射, 对平面上任意两点P,Q, d(P,Q) = d(T(P),T(Q)), 这里d(P,Q)代表两点之间的距离。证明: 存在实数$a,b,c,d,x_0,y_0$ 使得在平面直角坐标系下, T把每个点 $x,y$ 映射成 $(ax+by+x_0, cx+dy+y_0)$。\\
