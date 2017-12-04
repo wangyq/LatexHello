@@ -82,7 +82,7 @@ f(f(f(x))) &= -f(x) \\
 $$
 f(n) = \left\{ 
 \begin{aligned}
-0, n=0 \\
+0,  \quad n=0 \\
 n+1, \quad n>0\text{奇数}\\
 -n+1,  \quad n>0\text{偶数}\\
 n-1,  \quad n<0\text{奇数}\\
@@ -90,6 +90,20 @@ n-1,  \quad n<0\text{奇数}\\
 \end{aligned}
 \right.
 $$
+
+或者: 
+$$
+\left. 
+\begin{aligned}
+f(2k-1) = 2k , \quad k \in Z^+ \\
+f(2k) = 1-2k , \quad k \in Z^+ \\
+f(0) = 0 \\
+f(-x) = - f(x) 
+\end{aligned}
+\quad \right\}
+$$
+
+
 
 \subsubsection{概率相关}
 \noindent 1、甲和乙下棋，一局中甲获胜的概率是2/3，乙获胜的概率是1/3，一方比另一方多赢两局算赢，求甲获胜的概率？ \\
