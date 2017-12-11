@@ -51,6 +51,21 @@ $$ \frac{m^2\cdot x -1}{mx+1} < 0 $$
 $m<-1 , \quad -1/4<m<0 \quad \blacksquare$
 
 \section{练习题}
+
+\subsection{不等式}
+\noindent 1. For natural number $n=1,2,3, ...$, prove that  $$ \sqrt[n]{n} \le 1 + \sqrt{\frac{2}{n}}$$  \\
+\noindent \textbf{Proof.} \\
+First , it is clear that $n < 2^n \Longrightarrow 1 < \sqrt[n]{n} < 2 = \sqrt[n]{2^n}$ \\
+Let $ a = \sqrt[n]{n} -1 $,   $ 0<a<1 $ , which gives 
+\begin{align*}
+n & = (1+a)^n = 1 + na + \frac{n(n-1)}{2} \cdot a^2 + \cdots \\
+& > na + \frac{n(n-1)}{2} \cdot a^2 = \frac{n^2}{2} a^2 + na - \frac{1}{2}na^2 = \frac{n^2}{2} a^2 + na(1-\frac{1}{2}a) \\
+& > \frac{n^2}{2} a^2 \\
+& \Longrightarrow a < \sqrt{\frac{2}{n}} \\
+& \Longrightarrow \sqrt[n]{n} < 1 + \sqrt{\frac{2}{n}} 
+\end{align*}
+$\blacksquare$ \\
+
 \subsection{复数相关}
 \noindent 1. 有单位圆内接的任意五边形,对五边形的五个顶点, 连接每两个顶点得到一条线段，求这些线段的平方之和的最大值。\\
 \noindent \textbf{Solution.} \\
