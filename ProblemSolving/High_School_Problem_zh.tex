@@ -152,6 +152,27 @@ P(\{ X=n, Y<m \})  &= P(\{ X=n, Y=0 \} \cup \{ X=n, Y=1 \} \cup \cdots \{ X=n, Y
 &= (\frac{1}{2})^n \cdot \sum_{i=0}^{m-1} C_{n+i-1}^{n-1} (\frac{1}{2})^i  \\
 \blacksquare 
 \end{align*}
+\newpage
+\noindent 4. 1) 假设随机变量X取0到正无穷之间的值，其数学期望E[X]为1，求P$\{X \geq 8\}$的概率最大是多少。\\
+2) 设随机变量X服从“对数正态分布”(常用于个人收入分布模型)，已知期望值为e，标准差为1，求 
+P$\{X>8e\}$的概率值。 (对数正态分布（logarithmic normal distribution）是指一个随机变量的对数服从正态分布，则该随机变量服从对数正态分布。)\\
+\noindent \textbf{Solution.} \\
+1)
+\begin{align*}
+	E[X] & = \int_{0}^{+\infty} {xf(x)dx)} = \int_{0}^{a} {xf(x)dx)} + \int_{a}^{+\infty} {xf(x)dx)} \geq \int_{a}^{+\infty} {xf(x)dx)} \geq \int_{a}^{+\infty} {af(x)dx)} = a\cdot \int_{a}^{+\infty} {f(x)dx)} \\
+	& = a\cdot P\{X\geq a\} \\
+	\Longrightarrow & P\{X\geq a\} \le \frac{E[X]}{a} \\
+	\Longrightarrow & P\{X\geq 8\} \le \frac{E[X]}{8} = \frac{1}{8} = 0.125
+\end{align*}
+2) 记 $Y=\ln X \sim N(\mu,  \sigma^2) $ , 则 $Y$ 服从正态分布。\\
+\begin{align*}
+	E(X) & = e^{\mu + \sigma^{2}/2} = e, \quad \quad \quad D(X)=(e^{\sigma^2}-1)\cdot e^{2\mu+\sigma^2} = 1 \\
+	\Longrightarrow & \mu = \ln (E(X)) - \frac{1}{2} \ln \left(1+\frac{D(X)}{E(X)^2} \right ) = 2 - \frac{1}{2}\ln(1+e^2) \\
+	& \sigma^2 = \ln \left( 1+ \frac{D(X)}{E(X)^2}\right) = \ln (1+e^2) - 2 \\
+	So, \\
+	P\{X > 8e \} &= P\{Y=\ln X > 1 + \ln8 \} = 1- P\{Y=\ln X \le 1 + \ln8 \} \\
+	& = 1 - \Phi(\frac{1+\ln8-2+\frac{1}{2}\ln(1+e^2)}{\sqrt{\ln(1+e^2)-2}}) = 1-\Phi(6.01484) \approx 0
+\end{align*}
 
 \subsection{数列和级数}
 
