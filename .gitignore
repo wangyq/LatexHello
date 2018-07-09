@@ -14,11 +14,20 @@ build
 # latex:
 *.aux
 *.log
+*.out
+*.lof
+*.lol
+*.lot
 *.pdf
 *.gz
 *.toc
 *.bbl
+*.bak
 *.blg
+*.thm
+*.toc
+*.synctex.gz
+*.pre
 
 # My configurations:
 db.ini
