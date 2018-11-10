@@ -67,6 +67,24 @@ n & = (1+a)^n = 1 + na + \frac{n(n-1)}{2} \cdot a^2 + \cdots \\
 \end{align*}
 $\blacksquare$ \\
 
+\noindent 2. 已知$f(x)$是定义在R上的函数, 对所有的 $x$ 有如下等式成立: $f(x) + f(-x) = x^2$, 若对$x \in (-\infty,0]$, \\
+$f(x)$单调递增, 且 $f(2-a)-f(a) \geq 2-2a$, 求$a$的取值范围。 \\
+\textbf{Solution.} \\
+1) 由已知, $f(x) = x^2 - f(-x)$, 当$x>0$时, $x^2$ 以及$-f(-x)$单调递增，故$f(x)$单调递增。\\
+从而 对$x\in (-\infty,\infty)$, $f(x)$单调递增。 \\
+2) 令 $g(x)=f(x) - \frac{1}{2}x^2$, 代入后, 得: $g(x) + g(-x)=0$, $g(x)$是奇函数。\\
+当 $x<0$时, $g(x)$显然是增函数。 \\
+当 $x>0$时, $g(x) = -g(-x) = - f(-x) + \frac{1}{2}x^2$, 显然也单调递增。 \\
+3) 将$g(x)$代入不等式, 化简得到: \\
+\begin{align*}
+f(2-a)-f(a) \geq 2-2a \\
+g(2-a) - g(a) \geq 0 \\
+g(2-a) \geq g(a) \\
+a \leq 1
+\end{align*}
+$\blacksquare$ \\
+
+
 \subsection{复数相关}
 \noindent 1. 有单位圆内接的任意五边形,对五边形的五个顶点, 连接每两个顶点得到一条线段，求这些线段的平方之和的最大值。\\
 \noindent \textbf{Solution.} \\
