@@ -151,6 +151,31 @@ By substituting z=1, and take modulus on both sides,
 $$ 2 = \prod_{k=0}^{2n-1}|1-\xi_k| = \prod_{k=0}^{2n-1}2sin\frac{(2k+1)\pi}{4n} = 2^{2n}\cdot P^2$$
 $$P=(\frac{1}{\sqrt{2}})^{2n-1}$$
 
+\section{Calculus}
+\subsection{Derivative}
+\begin{enumerate}
+
+	\item Find the first derivative of $y=x^x$, and thus $y=f(x)^{g(x)}$
+	\\\textbf{Solution.}
+	\\\textbf{Note} that the function defined by $y = x^x$ is neither a power function of the form $x^n$ nor an exponential function of the form $a^x$ and the formulas of Differentiation of these functions cannot be used. We need to find another method to find the first derivative of the above function. 
+	
+	\begin{align*}
+		y  &= x^x        \\
+		\ln y &= x \ln x \\
+	\frac{y'}{y} &= 1+\ln{x} \\
+	y' &= y(1+\ln{x}) = (1+\ln{x})x^x
+	\end{align*}
+	Same process for  $y=f(x)^{g(x)}$,
+	\begin{align*}
+		y &= f(x)^{g(x)} \\
+		\ln{y} &= g(x) \ln{f(x)} \\
+		\frac{y'}{y} &= g'(x) \ln{f(x)} + \frac{g(x)}{f(x)} f'(x) \\
+		y' &= y \cdot (g'(x) \ln{f(x)} + \frac{g(x)}{f(x)} f'(x) ) = f(x)^{g(x)} \cdot \left( g'(x) \ln{f(x)} + \frac{g(x)}{f(x)} f'(x) \right)
+	\end{align*}
+	\item good morning....
+	
+\end{enumerate}
+
 \section{Real analysis}
 \subsection{1}
 Prove that the set of all rational numbers is countable.
