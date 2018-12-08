@@ -15,10 +15,19 @@
 
 \usepackage{amsmath}
 
-\usepackage{hyperref} %支持书签%
-%\hypersetup{hidelinks}
-\hypersetup{colorlinks=true,linkcolor=black}
+%\usepackage{hyperref} %支持书签%
+%\hypersetup{
+%  colorlinks   = true, %Colours links instead of ugly boxes
+%  urlcolor     = blue, %Colour for external hyperlinks
+%  linkcolor    = blue, %Colour of internal links
+%  citecolor   = red %Colour of citations
+%}
 
+%\usepackage{hyperref} %支持书签%
+%\hypersetup{hidelinks}
+%\hypersetup{colorlinks=true,linkcolor=black}
+\usepackage[hidelinks]{hyperref}
+%\usepackage[colorlinks=true, urlcolor=blue, pdfborder={0 0 0}]{hyperref}
 %\usepackage[colorlinks,linkcolor=red,anchorcolor=blue,citecolor=green]{hyperref}
 
 
@@ -270,7 +279,7 @@ This is a method! good\citep{wang2010research} day!
 
 \end{CJK}
 
-\section{hight school}
+\section{high school}
 \subsection{inequality}
 For positive number $x,y,z >0$, such that 
 \[ x+y+z+2xyz = 1+xy+yz+zx\]
