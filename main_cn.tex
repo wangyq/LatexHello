@@ -1,11 +1,47 @@
 %!TEX program = xelatex
 % 使用 ctexart 文类，UTF-8 编码
 \documentclass[UTF8]{ctexart}
+\ctexset{
+    section/titleformat=\raggedright
+}
+\usepackage{amsmath}
+
+%\usepackage{hyperref} %支持书签%
+%\hypersetup{
+%  colorlinks   = true, %Colours links instead of ugly boxes
+%  urlcolor     = blue, %Colour for external hyperlinks
+%  linkcolor    = blue, %Colour of internal links
+%  citecolor   = red %Colour of citations
+%}
+
+%\usepackage{hyperref} %支持书签%
+%\hypersetup{hidelinks}
+%\hypersetup{colorlinks=true,linkcolor=black}
+\usepackage[hidelinks]{hyperref}
+%\usepackage[colorlinks=true, urlcolor=blue, pdfborder={0 0 0}]{hyperref}
+%\usepackage[colorlinks,linkcolor=red,anchorcolor=blue,citecolor=green]{hyperref}
+
+
 \title{文章标题}
 \author{Siwind}
 \date{\today}
 \begin{document}
 \maketitle
+\tableofcontents
+
+\newpage
+\section{Introduction}
+
 This is the context of the article.
 这就是文章的所有内容。
+\section{Test}
+\subsection{Equation}
+
+A \textbf{probability space} is a triple($\Omega,F, P $), $\theta$.
+\begin{equation}
+	P_i(X_i \in B )=\int_{B}f_i(x)dx = \int_{B}f(x;\theta)dx
+\end{equation}
+
+
+\section{Conclusion}
 \end{document}
