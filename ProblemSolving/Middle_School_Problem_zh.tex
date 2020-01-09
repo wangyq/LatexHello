@@ -1,0 +1,55 @@
+\documentclass[UTF8]{article}
+    \usepackage{ctex}
+    \usepackage{graphicx}
+    
+    \usepackage{geometry}
+    %\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+    \geometry{scale=0.8}
+    
+    \usepackage[utf8]{inputenc}
+    \usepackage{amssymb}
+    \usepackage{amsmath}
+    
+    \usepackage{hyperref} %支持书签%
+    %\hypersetup{hidelinks}
+    \hypersetup{colorlinks=true,linkcolor=black}
+    
+    %\usepackage[colorlinks,linkcolor=red,anchorcolor=blue,citecolor=green]{hyperref}
+    
+    \usepackage{enumerate}
+    
+    
+    \title{初中问题}
+    \author{yinqingwang }
+    \date{July 2018}
+    
+    %% document start 
+    \begin{document}
+        \maketitle
+        \tableofcontents
+
+    \section{示例问题}
+    \subsection{趣题}
+
+    \section{数学问题}
+    \subsection{代数}
+    \newpage
+    \noindent 1. Prove that 
+    $$ \frac{(a+b-kc)^2}{(a-c)(b-c)} + \frac{(b+c-ka)^2}{(b-a)(c-a)} + \frac{(c+a-kb)^2}{(a-b)(c-b)} = (k+1)^2  $$
+
+    \noindent \textbf{Solution.} 
+    \begin{align*}
+        \Longleftrightarrow & \frac{(a+b-kc)^2(a-b)}{(a-b)(b-c)(a-c)} + \frac{(b+c-ka)^2(b-c)}{(a-b)(b-c)(a-c)} + \frac{(c+a-kb)^2(c-a)}{(a-b)(b-c)(c-a)} = (k+1)^2  \\
+        \Longleftrightarrow & (a+b-kc)^2(a-b) + (b+c-ka)^2(b-c) + (c+a-kb)^2(c-a) = (k+1^2)(a-b)(b-c)(a-c) \\
+        \Longleftrightarrow & [(a+b)^2(a-b)-2k(a+b)(a-b)+k^2(a-b)] + \\
+        & [(b+c)^2(b-c)-2k(b+c)(b-c)+k^2(b-c)] + \\
+        & [(c+a)^2(c-a)-2k(c+a)(c-a)+k^2(c-a)] = (k+1^2)(a-b)(b-c)(a-c) \\
+        \Longleftrightarrow & (a^2b+b^2c+c^2a-ab^2-bc^2-ca^2) + \\
+        & 2k(a^2b+b^2c+c^2a-ab^2-bc^2-ca^2) + \\
+        & k^2(a^2b+b^2c+c^2a-ab^2-bc^2-ca^2) = (k+1^2)(a-b)(b-c)(a-c) \\
+        \Longleftrightarrow & (k^2+2k+1)(a^2b+b^2c+c^2a-ab^2-bc^2-ca^2) = (k+1)^2(a-b)(b-c)(a-c) \\
+        \Longleftrightarrow & (k+1)^2(a-b)(b-c)(a-c) = (k+1)^2(a-b)(b-c)(a-c)
+    \end{align*}
+
+
+\end{document}
