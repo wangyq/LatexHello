@@ -33,8 +33,11 @@
 
     \section{数学问题}
     \subsection{代数}
-    \newpage
-    \noindent 1. Prove that 
+
+    \begin{enumerate}
+    %\newpage
+    \item Prove that 
+    
     $$ \frac{(a+b-kc)^2}{(a-c)(b-c)} + \frac{(b+c-ka)^2}{(b-a)(c-a)} + \frac{(c+a-kb)^2}{(a-b)(c-b)} = (k+1)^2  $$
 
     \noindent \textbf{Solution.} 
@@ -51,5 +54,61 @@
         \Longleftrightarrow & (k+1)^2(a-b)(b-c)(a-c) = (k+1)^2(a-b)(b-c)(a-c)
     \end{align*}
 
+    \item 化简: $ \sqrt[3]{2+\sqrt{5}} $
+
+    \noindent \textbf{Solution 1.}  Let 
+    \[
+     \begin{aligned}
+        u = \sqrt[3]{2+\sqrt{5}} \, > 0 \\
+        v = \sqrt[3]{2-\sqrt{5}} \, < 0
+    \end{aligned}
+    \Longrightarrow 
+    \left \{
+    \begin{aligned}              
+        u^3 + v^3 = 4 \\
+        u \cdot v = -1
+    \end{aligned}
+    \Longrightarrow 
+    (u+v)\left[(u+v)^2 - 3uv\right] = 4
+    \right.
+    \]
+    Let 
+    \[
+    t = u + v
+    \Longrightarrow t^3 + 3t - 4 = 0
+    \Longrightarrow (t-1)(t^2+t+4) = 0
+    \Longrightarrow t = 1
+    \]
+    So,
+    \begin{align*}
+        \left\{
+            \begin{aligned}
+                u + v = 1 \\
+                u \cdot v = -1
+            \end{aligned}
+        \right.
+        \Longrightarrow  u = \sqrt[3]{2+\sqrt{5}} = \frac{1+\sqrt{5}}{2} \\
+        \blacksquare
+    \end{align*}
+ 
+    \noindent \textbf{Solution 2.}  Let $$ \sqrt[3]{2+\sqrt{5}} = (a + b \sqrt{5}) $$ \\
+    So, 
+    \begin{align*}
+        & 2 + \sqrt{5} = (a+b\sqrt{5})^3 = (a^3 + 15ab^2) + (3a^2b + 5b^3)\sqrt{5} \\
+        \Longrightarrow & \left\{
+            \begin{aligned}
+                a^3 + 15ab^2 = 2 \\
+                3a^2b + 5b^3 = 1
+            \end{aligned}
+            \Longrightarrow a^3 + 15ab^2 = 2 \cdot (3a^2b + 5b^3)
+            \Longrightarrow (\frac{a}{b})^3 -6(\frac{a}{b})^2 + 15(\frac{a}{b}) -10 = 0
+            \right. \\
+            \Longrightarrow & \frac{a}{b} = 1 \  , \  a = b = \frac{1}{2} \\
+            & \sqrt[3]{2 + \sqrt{5}} = \frac{1+\sqrt{5}}{2} \\
+            \blacksquare
+        \end{align*}
+
+
+    \end{enumerate}
 
 \end{document}
