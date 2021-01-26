@@ -59,7 +59,36 @@ $$ \frac{m^2\cdot x -1}{mx+1} < 0 $$
 
 \noindent \textbf{Solution.} \\
 分式变为乘积后为二次方程。 易得 $m<0$ 。两个根 $x_1,x_2 <4$ ,可以解得m的取值范围。\\
-$m<-1 , \quad -1/4<m<0 \quad \blacksquare$
+$m<-1 , \quad -1/4<m<0 \quad \blacksquare$  \\
+
+\newpage
+\noindent 3. 如果函数$y=f(x)$ 满足 $f(x_0)=x_0$, 则点$(x_0,x_0)$称为该函数的不动点。两个不动点之间的距离称为"不动长度"。\\
+(1) 一次函数$y=3x-1$的不动点是：$\underline{~~~~~~~~~~~~}$; 反比例函数$y=\frac{2}{x}$的不动长度是：$\underline{~~~~~~~~~~~~}$。\\
+(2) 若二次函数$y=x^2-mx+m$的不动长度$L=6\sqrt{2}$, 求$m$的值。\\
+(3) 若关于$x$的函数$y=ax^2 + (2b+1)x +c$存在两个不动点并且同时满足： $a+b+c=0, a>b>c$， 求不动长度L的取值范围。
+	
+\noindent \textbf{Solution.} \\
+(3) 由已知， $a+b+c = 0, a>b>c $ 可以得到: $a>0, c<0$ , 于是 $t=\frac{c}{a}<0$, $ac<0$\\
+由不动点定义，$f(x)=x$有两个不同的根：
+\begin{align*}
+	ax^2+(2b+1)x+c &=x \\
+	ax^2 + 2bx +c &= 0 \qquad (*)\\
+	\Delta = (2b)^2 -4ac & > 0 \\
+	b^2 & > ac \\
+	\Longrightarrow b & \neq 0
+\end{align*}
+方程$(*)$的两个根$x_0,x_1$就是两个不动点的横坐标，于是两个不动点的距离L: 
+\begin{align*}
+	L^2 &=(x_1-x_0)^2 + (x_1-x_0)^2 \\
+	&=2\left[ (x_1+x_0)^2 - 4x_1x_0\right] \\
+	&=8\frac{b^2-ac}{a^2} \\
+	&= 8\frac{(a+c)^2-ac}{a^2} \\
+	&=8(1+\frac{c}{a}+\frac{c^2}{a^2}) \\
+	&=8\left[ (\frac{c}{a}+\frac{1}{2})^2 + \frac{3}{4}\right] \\
+	&=8\left[ (t+\frac{1}{2})^2 + \frac{3}{4}\right] \\
+	& \ge 6 \\
+	& \Longrightarrow L \ge \sqrt{6} \qquad \blacksquare  
+\end{align*}
 
 \section{练习题}
 
